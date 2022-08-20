@@ -68,11 +68,13 @@
             <td>
               <!-- <a href="/admin/produk/{{ strtolower($produk->nama) }}" class="btn btn-info"><i data-feather="eye"></i></a> -->
               <a href="/admin/produk/{{ strtolower($produk->nama) }}/edit" class="btn btn-warning"><i data-feather="edit"></i></a>
+              @can('admin')
               <form action="/admin/produk/{{ strtolower($produk->nama) }}" method="post" class="d-inline">
                 @method('delete')
                 @csrf
                 <button href="/admin/produk/{{ strtolower($produk->nama) }}" class="btn btn-danger" type="submit" onclick="return confirm('Are you sure?')"><i data-feather="trash"></i></button>
               </form>
+              @endcan
             </td>
           </tr>
           @endforeach

@@ -27,7 +27,7 @@ class TokoController extends Controller
         if(auth()->user()->name)
         {
             return view('admin.toko.index',[
-                'usahas' => Toko::latest()->get()
+                'usahas' => Toko::where('nama', '=' . auth()->user()->name)->get()
             ]);
         }
     }
