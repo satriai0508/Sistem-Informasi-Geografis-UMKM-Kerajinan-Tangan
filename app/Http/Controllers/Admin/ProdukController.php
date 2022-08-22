@@ -27,7 +27,7 @@ class ProdukController extends Controller
         if(auth()->user()->name)
         {
             return view('admin.produk.index',[
-                'produks' => Produk::where('nama_toko', '=' . auth()->user()->name)->get()
+                'produks' => Produk::where('nama_toko', '=' , auth()->user()->name)->get()
             ]);
         }
     }
