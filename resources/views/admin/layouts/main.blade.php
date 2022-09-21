@@ -1,13 +1,6 @@
 @include('admin.layouts.header')
   <!-- ============================================================== -->
-  <!-- Preloader - style you can find in spinners.css -->
-  <!-- ============================================================== -->
-  <div class="preloader">
-    <div class="lds-ripple">
-      <div class="lds-pos"></div>
-      <div class="lds-pos"></div>
-    </div>
-  </div>
+  @include('admin.layouts.preload')
   <!-- ============================================================== -->
   <!-- Main wrapper - style you can find in pages.scss -->
   <!-- ============================================================== -->
@@ -92,7 +85,7 @@
       <!-- End Container fluid  -->
       <!-- ============================================================== -->
       @include('admin.layouts.watermark')
-     
+
     </div>
     <!-- ============================================================== -->
     <!-- End Page wrapper  -->
